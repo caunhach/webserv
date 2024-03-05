@@ -1,7 +1,9 @@
 NAME = webserv
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = srcs/main.cpp
+SRCS = srcs/main.cpp \
+	   srcs/Config/Config.cpp \
+	   srcs/Server/Cluster.cpp
 OBJS = $(SRCS:.cpp=.o)
 # INCS = Bureaucrat.hpp
 RM = rm -f
