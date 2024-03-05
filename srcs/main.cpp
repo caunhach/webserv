@@ -6,6 +6,11 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		Cluster cluster;
+		try {
+			cluster.configServer(argv[1]);
+		} catch (std::exception &e) {
+			std::cout << "Invalid config file" << std::endl;
+		}
 	}
 	else
 	{
