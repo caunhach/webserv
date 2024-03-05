@@ -7,6 +7,7 @@
 class Config {
 	public:
 		Config(std::string config_file = default_config);
+		int		parseConfig(std::string config_file);
 };
 
 #endif

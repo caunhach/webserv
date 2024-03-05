@@ -7,6 +7,7 @@
 class Cluster {
 	public:
 		Cluster(void);
+		void	configServer(std::string config_file);
 	private:
 		Config		_config;
 };
