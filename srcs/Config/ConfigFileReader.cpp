@@ -2,6 +2,19 @@
 
 ConfigFileReader::ConfigFileReader(void) {}
 
+ConfigFileReader::ConfigFileReader(ConfigFileReader const &src) {
+	if (this != &src)
+		*this = src;
+}
+
+ConfigFileReader &ConfigFileReader::operator=(ConfigFileReader const &rhs) {
+	if (this != &rhs)
+		*this = rhs;
+	return *this;
+}
+
+ConfigFileReader::~ConfigFileReader(void) {}
+
 std::vector<std::string> ConfigFileReader::readConfigFile(std::string config_file)
 {
 	std::vector<std::string> lines;
@@ -17,4 +30,8 @@ std::vector<std::string> ConfigFileReader::readConfigFile(std::string config_fil
 
 	file.close();
 	return lines;
+}
+
+const char* ConfigFileReader::FileConflictException::what() const throw() {
+	return ("File not found or unable to open");
 }
