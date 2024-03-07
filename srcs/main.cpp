@@ -9,6 +9,7 @@ int	main(int argc, char **argv)
 		try {
 			cluster.configServer(argv[1]);
 		} catch (std::exception &e) {
+			// std::cout << e.what() << std::endl;
 			std::cout << "Invalid config file" << std::endl;
 		}
 	}

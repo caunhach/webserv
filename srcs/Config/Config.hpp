@@ -3,6 +3,7 @@
 # define CONFIG_HPP
 
 # include "../../includes/webserv.hpp"
+# include "ConfigFileReader.hpp"
 
 class Config {
 	public:

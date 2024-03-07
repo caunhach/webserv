@@ -6,6 +6,7 @@ Config::Config(std::string	defaultServerPath) {
 }
 
 int	Config::parseConfig(std::string config_file) {
-	std::cout << "parsing config file " << config_file << std::endl;
-	return 0;
+	std::vector<std::string> file = ConfigFileReader::readConfigFile(config_file);
+	unsigned int NumberofLines = file.size();
+	return NumberofLines;
 }
