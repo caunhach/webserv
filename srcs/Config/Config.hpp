@@ -4,6 +4,7 @@
 
 # include "../../includes/webserv.hpp"
 # include "ConfigFileReader.hpp"
+# include "ConfigParser.hpp"
 
 class Config {
 	public:

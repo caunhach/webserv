@@ -15,7 +15,7 @@ ConfigFileReader &ConfigFileReader::operator=(ConfigFileReader const &rhs) {
 
 ConfigFileReader::~ConfigFileReader(void) {}
 
-std::vector<std::string> ConfigFileReader::readConfigFile(std::string config_file)
+FileVector ConfigFileReader::readConfigFile(std::string config_file)
 {
 	std::vector<std::string> lines;
 	std::ifstream file(config_file);

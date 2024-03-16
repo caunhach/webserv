@@ -5,6 +5,7 @@ SRCS = srcs/main.cpp \
 	   srcs/Config/Config.cpp \
 	   srcs/Config/ConfigFileReader.cpp \
 	   srcs/Config/ConfigParser.cpp \
+	   srcs/Config/ConfigServer.cpp \
 	   srcs/Server/Cluster.cpp
 OBJS = $(SRCS:.cpp=.o)
 # INCS = Bureaucrat.hpp

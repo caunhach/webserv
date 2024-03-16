@@ -55,6 +55,7 @@ class ConfigServer {
 		bool		_autoindex;
 		std::string	_alias;
 		bool		_aliasSet;
+		static ConfigServer		_defaultConfigServer;
 };
 
 #endif

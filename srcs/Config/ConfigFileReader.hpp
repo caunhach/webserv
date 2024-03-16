@@ -3,6 +3,8 @@
 
 #include "../../includes/webserv.hpp"
 
+#define FileVector std::vector<std::string>
+
 class ConfigFileReader {
 	public:
 		ConfigFileReader(void);
@@ -10,7 +12,7 @@ class ConfigFileReader {
 		ConfigFileReader &operator=(ConfigFileReader const &rhs);
 		virtual ~ConfigFileReader(void);
 
-		static std::vector<std::string> readConfigFile(std::string config_file);
+		static FileVector readConfigFile(std::string config_file);
 		class FileConflictException : public std::exception{
 			virtual const char* what() const throw();
 		};

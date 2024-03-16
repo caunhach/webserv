@@ -3,6 +3,8 @@
 
 #include "../../includes/webserv.hpp"
 
+#define ConfigMap std::map<std::string, void (ConfigServer::*)(FileVector)>
+
 typedef struct s_listen {
 	unsigned int	host;
 	int				port;
