@@ -6,13 +6,14 @@ Config::Config(std::string	defaultServerPath) {
 }
 
 Config::Config(Config const &src) {
-	// if (this != &src)
-	// 	this->_servers = src._servers;
+	if (this != &src)
+		*this = src;
 }
 
 Config &Config::operator=(Config const &rhs) {
 	if (this != &rhs)
 		*this = rhs;
+	return *this;
 }
 
 Config::~Config(void) {}
@@ -20,5 +21,7 @@ Config::~Config(void) {}
 int	Config::parseConfig(std::string config_file) {
 	std::vector<std::string> file = ConfigFileReader::readConfigFile(config_file);
 	unsigned int NumberofLines = file.size();
+	ConfigParser configParser;
 	return NumberofLines;
+	// return 0;
 }

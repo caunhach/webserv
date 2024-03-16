@@ -1,6 +1,10 @@
 #include "ConfigServer.hpp"
 
-ConfigServer::ConfigServer(void) : _root(""), _client_max_body_size(0), _autoindex(false), _aliasSet(false) {}
+ConfigServer ConfigServer::_defaultConfigServer = ConfigServer();
+
+ConfigServer::ConfigServer(void) : _root(""), _client_max_body_size(0), _autoindex(false), _aliasSet(false) 
+{
+}
 
 ConfigServer::ConfigServer(ConfigServer const &src) {
 	if (this != &src)
@@ -14,6 +18,10 @@ ConfigServer &ConfigServer::operator=(ConfigServer const &rhs) {
 }
 
 ConfigServer::~ConfigServer(void) {}
+
+const char* ConfigServer::InvalidArgumentException::what() const throw() {
+	return ("Invalid argument");
+}
 
 std::vector<t_listen>	ConfigServer::getListen(void) const
 {
