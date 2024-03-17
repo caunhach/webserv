@@ -14,6 +14,10 @@ class Config {
 		virtual ~Config(void);
 
 		int		parseConfig(std::string config_file);
+		std::vector<ConfigServer>			getServers() const;
+		std::vector<t_listen>				getAllListens() const;
+	private:
+		std::vector<ConfigServer> 			_servers;
 };
 
 #endif
